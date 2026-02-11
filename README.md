@@ -16,10 +16,9 @@ Plugin QGIS per la consultazione del Catalogo IRDAT FVG. Permette la ricerca nel
 la visualizzazione dei metadati e il caricamento dei layer WFS nel progetto QGIS.
 
 ## Funzionalita
-- Ricerca per soggetto e/o testo libero.
-- Elenco risultati con titolo, abstract, id e URL WFS.
-- Visualizzazione metadati integrata (QtWebEngine) e apertura nel browser.
-- Caricamento diretto dei layer WFS in QGIS.
+fare riferimento alla documentazione originale del plugin IRDAT Explorer 3:
+
+https://www.regione.fvg.it/rafvg/cms/RAFVG/ambiente-territorio/conoscere-ambiente-territorio/FOGLIA6/
 
 ## Requisiti
 - QGIS 3.0+ (metadata: `qgisMinimumVersion=3.0`).
