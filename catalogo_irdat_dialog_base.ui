@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CatalogoIRDATDialogBase</class>
+ <widget class="QDialog" name="CatalogoIRDATDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>IRDAT Explorer 3</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/plugins/catalogo_irdat_3/images/icon.png</normaloff>:/plugins/catalogo_irdat_3/images/icon.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="4" column="0">
+    <widget class="QPushButton" name="chiudi_pushButton">
+     <property name="text">
+      <string>Chiudi</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Consultazione catalogo IRDAT </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLineEdit" name="status_lineEdit">
+     <property name="dragEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="consultazione_tab">
+      <attribute name="title">
+       <string>Consultazione</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="inizia_consultazione_pushButton">
+         <property name="text">
+          <string>Inizia la consultazione</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/plugins/catalogo_irdat_3/images/Next.ico</normaloff>:/plugins/catalogo_irdat_3/images/Next.ico</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ricerca_groupBox">
+         <property name="title">
+          <string>Ricerca</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QGridLayout" name="ricerca_gridLayout">
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item row="4" column="1">
+             <widget class="QPushButton" name="ricerca_pushButton">
+              <property name="text">
+               <string>Avvia ricerca</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resources.qrc">
+                <normaloff>:/plugins/catalogo_irdat_3/images/Next.ico</normaloff>:/plugins/catalogo_irdat_3/images/Next.ico</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Soggetti:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Testo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QComboBox" name="soggetti_comboBox"/>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="testo_lineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Lingua:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QComboBox" name="lingua_comboBox">
+              <item>
+               <property name="text">
+                <string>Italiano</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>English</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="2" column="0">
+          <widget class="QPushButton" name="carica_layer_pushButton">
+           <property name="text">
+            <string>Carica layer</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/plugins/catalogo_irdat_3/images/Add.ico</normaloff>:/plugins/catalogo_irdat_3/images/Add.ico</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="tableWidget">
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Titolo</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Abstract</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="visualizza_metadati_pushButton">
+           <property name="text">
+            <string>Visualizza metadati</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/plugins/catalogo_irdat_3/images/Info.ico</normaloff>:/plugins/catalogo_irdat_3/images/Info.ico</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="metadata_tab">
+      <attribute name="title">
+       <string>Metadata</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QWebView" name="metadata_webView" native="true">
+           <property name="url" stdset="0">
+            <url>
+             <string>about:blank</string>
+            </url>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="apri_webbrowser_pushButton">
+           <property name="text">
+            <string>Apri nel web browser</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="carica_layer_MD_pushButton">
+           <property name="text">
+            <string>Carica layer</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/plugins/catalogo_irdat_3/images/Add.ico</normaloff>:/plugins/catalogo_irdat_3/images/Add.ico</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="log_tab">
+      <attribute name="title">
+       <string>Log</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QListWidget" name="log_listWidget"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="log_comboBox">
+         <item>
+          <property name="text">
+           <string>Mostra tutti</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mostra livello &quot;INFO&quot;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mostra livello &quot;WARNING&quot;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mostra livello &quot;CRITICAL&quot;</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>inizia_consultazione_pushButton</tabstop>
+  <tabstop>testo_lineEdit</tabstop>
+  <tabstop>soggetti_comboBox</tabstop>
+  <tabstop>ricerca_pushButton</tabstop>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>visualizza_metadati_pushButton</tabstop>
+  <tabstop>carica_layer_pushButton</tabstop>
+  <tabstop>status_lineEdit</tabstop>
+  <tabstop>chiudi_pushButton</tabstop>
+  <tabstop>carica_layer_MD_pushButton</tabstop>
+  <tabstop>log_listWidget</tabstop>
+  <tabstop>log_comboBox</tabstop>
+ </tabstops>
+
+
+
+ <connections>
+  <connection>
+   <sender>inizia_consultazione_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>inizia_consultazione_pushButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ricerca_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>ricerca_pushButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>430</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>380</x>
+     <y>230</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>visualizza_metadati_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>visualizza_metadata_pushButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>670</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>719</x>
+     <y>652</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>carica_layer_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>carica_layer_pushButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>416</x>
+     <y>716</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>680</x>
+     <y>684</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>carica_layer_MD_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>carica_layer_pushButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>501</x>
+     <y>707</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>826</x>
+     <y>687</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>log_comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>log_comboBox_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>703</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>563</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chiudi_pushButton</sender>
+   <signal>released()</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>chiudi_pushButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>513</x>
+     <y>778</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>643</x>
+     <y>777</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>layer_tableWidget_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>460</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1068</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>testo_lineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>ricerca_pushButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>584</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lingua_comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>lingua_comboBox_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>183</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1081</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>apri_webbrowser_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CatalogoIRDATDialogBase</receiver>
+   <slot>apri_webbrowser_pushButton_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>682</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-147</x>
+     <y>396</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>inizia_consultazione_pushButton_clicked()</slot>
+  <slot>ricerca_pushButton_clicked()</slot>
+  <slot>visualizza_metadata_pushButton_clicked()</slot>
+  <slot>carica_layer_pushButton_clicked()</slot>
+  <slot>layer_tableWidget_clicked(QModelIndex)</slot>
+  <slot>chiudi_pushButton_clicked()</slot>
+  <slot>log_comboBox_changed()</slot>
+  <slot>layer_tableWidget_changed()</slot>
+  <slot>lingua_comboBox_changed(int)</slot>
+  <slot>apri_webbrowser_pushButton_clicked()</slot>
+ </slots>
+</ui>

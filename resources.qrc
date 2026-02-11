@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/plugins/catalogo_irdat_3" >
+        <file>images/Add.ico</file>
+        <file>images/Back.ico</file>
+        <file>images/Delete.ico</file>
+        <file>images/icon.png</file>
+        <file>images/icon3.png</file>
+        <file>images/Info.ico</file>
+        <file>images/irdat.png</file>
+        <file>images/irdat_background.png</file>
+        <file>images/Next.ico</file>
+    </qresource>
+</RCC>
