@@ -1,3 +1,11 @@
+Per far funzionare il plugin "IRDAT Explorer 3" con QGIS 3.44 e risolvere definitivamente l'errore ModuleNotFoundError, è necessario migrare il codice dalle vecchie librerie QtWebKit (ormai rimosse dal sistema) alle nuove QtWebEngine.
+
+Dato che sei su ambiente Linux/Debian, prima di procedere assicurati di aver installato il pacchetto di supporto a livello di sistema operativo eseguendo da terminale:
+
+sudo apt install python3-pyqt5.qtwebengine
+
+
+
 Un'avvertenza fondamentale per PyCharm e QGIS
 
 Noterai che nel file requirements.txt mancano le librerie qgis.core e qgis.PyQt. Questo perché le API di QGIS non sono pacchetti scaricabili tramite pip.

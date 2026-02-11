@@ -212,7 +212,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QWebView" name="metadata_webView" native="true">
+          <widget class="QWebEngineView" name="metadata_webView" native="true">
            <property name="url" stdset="0">
             <url>
              <string>about:blank</string>
@@ -233,7 +233,7 @@
             <string>Carica layer</string>
            </property>
            <property name="icon">
-            <iconset resource="resources.qrc">
+             <iconset resource="resources.qrc">
              <normaloff>:/plugins/catalogo_irdat_3/images/Add.ico</normaloff>:/plugins/catalogo_irdat_3/images/Add.ico</iconset>
            </property>
           </widget>
@@ -282,9 +282,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QWebView</class>
+   <class>QWebEngineView</class>
    <extends>QWidget</extends>
-   <header>QtWebKit/QWebView</header>
+   <header>PyQt5.QtWebEngineWidgets</header>
   </customwidget>
  </customwidgets>
  <tabstops>
@@ -301,9 +301,6 @@
   <tabstop>log_listWidget</tabstop>
   <tabstop>log_comboBox</tabstop>
  </tabstops>
-
-
-
  <connections>
   <connection>
    <sender>inizia_consultazione_pushButton</sender>
