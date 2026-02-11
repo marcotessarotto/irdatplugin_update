@@ -1,0 +1,24 @@
+Un'avvertenza fondamentale per PyCharm e QGIS
+
+Noterai che nel file requirements.txt mancano le librerie qgis.core e qgis.PyQt. Questo perché le API di QGIS non sono pacchetti scaricabili tramite pip.
+
+Se installi solo il file requirements.txt, PyCharm ti mostrerà un errore (linea rossa) su tutti gli import qgis... e l'autocompletamento del codice QGIS non funzionerà. Su sistemi Linux (come la tua distribuzione Debian), QGIS è integrato direttamente con l'interprete Python di sistema.
+
+Per risolvere il problema degli errori di importazione in PyCharm e avere l'autocompletamento completo, devi istruire l'IDE su dove trovare le librerie di QGIS:
+
+    In PyCharm, vai su File > Settings > Project: [NomeProgetto] > Python Interpreter.
+
+    Assicurati di star utilizzando l'interprete di sistema (es. /usr/bin/python3) oppure, se usi un Virtual Environment, assicurati di aver spuntato l'opzione "Inherit global site-packages" alla sua creazione.
+
+    Nel menu a tendina dell'interprete, clicca su Show All..., seleziona il tuo interprete e clicca sull'icona a forma di albero delle directory (Show paths for the selected interpreter).
+
+    Clicca sul tasto + e aggiungi manualmente questi due percorsi:
+
+        /usr/share/qgis/python
+
+        /usr/share/qgis/python/plugins
+
+    Clicca OK e lascia che PyCharm re-indicizzi lo scheletro del codice (potrebbe volerci qualche minuto).
+
+In questo modo avrai un ambiente di sviluppo pulito, con l'autocompletamento sia per requests che per l'intera libreria geospaziale di QGIS.
+

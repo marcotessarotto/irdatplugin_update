@@ -1,0 +1,6 @@
+# Dipendenze di rete
+requests>=2.25.0
+
+# Dipendenze interfaccia grafica (Qt5)
+PyQt5>=5.15.0
+PyQtWebEngine>=5.15.0
